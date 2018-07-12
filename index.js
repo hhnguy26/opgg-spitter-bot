@@ -20,6 +20,9 @@ client.on('message', (message) => {
         var b = a.replace(/joined the lobby/g, ' ');
         var c = b.replace(/\s\s/g, '');
         var names = c.split('\n');
+        
+        if (names.length > 5) return;
+
         for (i = 0; i < names.length; i++) {
             names[i] = names[i].replace(/\s/g, '+');
             message.channel.send(baseUrl + names[i]);
