@@ -21,7 +21,10 @@ client.on('message', (message) => {
         var c = b.replace(/\s\s/g, '');
         var names = c.split('\n');
         
-        if (names.length > 5) return;
+        if (names.length > 5) {
+            message.reply("Too many players! Please check again");
+            return;
+        } 
 
         for (i = 0; i < names.length; i++) {
             names[i] = names[i].replace(/\s/g, '+');
