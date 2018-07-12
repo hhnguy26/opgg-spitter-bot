@@ -22,7 +22,7 @@ client.on('message', (message) => {
         var names = c.split('\n');
         
         if (names.length > 5) {
-            message.reply("Too many players! Please check again");
+            message.reply("Too many players!");
             return;
         } 
 
